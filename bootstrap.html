@@ -9,26 +9,43 @@
     	    	background: -webkit-linear-gradient(rgb(80,80,80,0.2), rgba(169,169,169,0.2)); /* For Safari 5.1 to 6.0 */
     			background: -o-linear-gradient(rgb(80,80,80,0.2), rgba(169,169,169,0.2)); /* For Opera 11.1 to 12.0 */
     			background: -moz-linear-gradient(rgb(80,80,80,0.2), rgba(169,169,169,0.2)); /* For Firefox 3.6 to 15 */
-    			background: linear-gradient(rgb(80,80,80,0.2), rgba(169,169,169,0.2)); /* Standard syntax */
+    			background: linear-gradient(rgb(80,80,80,0.3), rgba(169,169,169,0.3)); /* Standard syntax */
     	    }
     	    .navbar-header{
     	    	position:center;
     	    }
-    	   
+
+    	    .btn-group{
+                background: -webkit-linear-gradient(rgb(100,100,100,0.3), rgba(180,180,180,0.3));
+                background: -o-linear-gradient(rgb(100,100,100,0.3), rgba(180,180,180,0.3));
+                background: -moz-linear-gradient(rgb(100,100,100,0.3), rgba(180,180,180,0.3));
+                background: linear-gradient(rgb(100,100,100,0.4), rgba(180,180,180,0.4));
+                width: 100%;
+                height: 100%;
+            }
+            .btn{
+                width: 100%;
+            }
+            .btn:hover{
+                width: 100%;
+                background: -webkit-linear-gradient(rgb(120,120,120,0.4), rgba(190,190,190,0.4));
+                background: -o-linear-gradient(rgb(120,120,120,0.4), rgba(190,190,190,0.4));
+                background: -moz-linear-gradient(rgb(120,120,120,0.4), rgba(190,190,190,0.4));
+                background: linear-gradient(rgb(120,120,120,0.4), rgba(190,190,190,0.4));
+            }
     	    .main-page{
-    	    	width: 1248px;
-    	    	height: 1024px;
+    	    	width: 100%;
+    	    	height: 100%;
     	    	background-image: url("http://fonday.ru/images/tmp/16/7/original/16752WKiCyFIrvElSbosNxtzaj.jpg");
-    	    	//background-attachment: fixed;
     	    	position:relative;
     	    	-webkit-animation: bganimation 10s infinite;
     	    	animation: bganimation 30s linear infinite;
+                margin:0; 
     	    }
     	    @-webkit-keyframes bganimation{
-    	    	/*0%   {right: 0%;}
-    			50%  {right: 50%;}
-                100% {right: 0%;}
-                */
+    	    	0%   {background-position:0% 0%;}
+    			50%  {background-position:0% 0%;}
+                100% {background-position:0% 0%;}
     	    }
     	    @keyframes bganimation{
     	    	0%   {background-position:0% 0%;}
@@ -36,6 +53,33 @@
                 100% {background-position:0% 0%;}
                
     	    }
+            .panel-default{
+                background: -webkit-linear-gradient(rgb(100,100,100,0.3), rgba(180,180,180,0.3));
+                background: -o-linear-gradient(rgb(100,100,100,0.3), rgba(180,180,180,0.3));
+                background: -moz-linear-gradient(rgb(100,100,100,0.3), rgba(180,180,180,0.3));
+                background: linear-gradient(rgb(80,80,80,0.6), rgba(130,130,130,0.6));
+                height:95%;
+                width:100%;
+            }
+            .panel-default:hover{
+                background: -webkit-linear-gradient(rgb(100,100,100,0.3), rgba(180,180,180,0.3));
+                background: -o-linear-gradient(rgb(100,100,100,0.3), rgba(180,180,180,0.3));
+                background: -moz-linear-gradient(rgb(100,100,100,0.3), rgba(180,180,180,0.3));
+                background: linear-gradient(rgb(80,80,80,0.8), rgba(130,130,130,0.8));
+            }
+            .panelHeader{
+                font-size: 20pt;
+                width:;
+                position: relative;
+                color: #E6E6FA;
+                text-align: center;
+                
+            }
+            .panelText{
+                font-size: 18pt;
+                color:#E6E6FA;
+            }
+            }
     	</style>
     </head>
     <body>
@@ -45,9 +89,9 @@
 			    	<div class="navbar-header">
 			      		<a class="navbar-brand" href="#">
 			        			<img alt="Brand" src="https://lh3.googleusercontent.com/oKsgcsHtHu_nIkpNd-mNCAyzUD8xo68laRPOfvFuO0hqv6nDXVNNjEMmoiv9tIDgTj8=w170" style="widht:64px; height:64px;">
-			        		<a href="#" style="font-size: 32pt;">My Bootstrap Website</a>
 			      		</a>
 			    	</div>
+                    <h1 class="page-header" style="font-size: 44pt; position:relative; text-align:center; color:#E6E6FA;">My Bootstrap Website</h1>
 			    	<ul class="nav navbar-nav">
 				      <li class="active"><a href="#">Home</a></li>
 				      <li><a href="#">Page 1</a></li>
@@ -55,9 +99,29 @@
 				      <li><a href="#">Page 3</a></li>
 				    </ul>
 			  	</div>
-			</nav>
-            <div>
+                <div class="container-fluid">
+                    <div class="btn-group" role="group">
+                        
+                            <a class="btn btn-default" href="#">Home</a>
 
+                            <a class="btn btn-default" href="#">Page 1</a>
+                        
+                       
+                            <a class="btn btn-default" href="#">Page 3</a>
+                       
+                        
+                            <a class="btn btn-default" href="#">Page 4</a>
+                       
+                    </div>
+                </div>
+			</nav>
+            <div class="container" style="position:relative; height:75%; width:35%; margin-left:auto; margin-right:0; padding-right:0;">
+                <div class="panel panel-default">
+                    <div class="panelHeader"><b>Right Panel</b></div>
+                    <div class="panel-body">
+                        <b class="panelText" align-"center">Panel content</b>
+                    </div>
+                </div>
             </div>
             <div>
 
